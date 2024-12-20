@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- logo tab -->
+    <link rel="icon" href="img/nusantaralogo.png" type="image/x-icon">
+
+    <!-- Favicon tambahan untuk resolusi tinggi -->
+    <link rel="apple-touch-icon" href="img/nusantaralogo.png">
+    <link rel="icon" href="img/nusantaralogo.png" type="image/png" sizes="32">
+    <link rel="icon" href="img/nusantaralogo.png" type="image/png" sizes="16">
+    
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <title>Kekayaan Samudera - Hayati</title>
+    <style>
+        .bg-changing {
+            background-size: cover;
+            background-position: center;
+            transition: background-image 0.5s ease-out;
+        }
+        .crop {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+        .crop img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+        }
+        .custom-font {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 800;
+            letter-spacing: 0.8px;
+        }
+        .text-shadow {
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), /* Bayangan utama */
+                     -2px -2px 5px rgba(0, 0, 0, 0.2), /* Bayangan tambahan */
+                     3px 3px 5px rgba(0, 0, 0, 0.2);  /* Bayangan tambahan */
+        }
+ 
+    </style>
+</head>
+<body>
+
+    <!--nav start-->
+    <nav class="fixed w-full shadow p-4 px-28 bg-black bg-opacity-20 z-50">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center w-80">
+            <!-- Container text dan logo -->
+            <div class="text-xl font-bold flex items-center space-x-2">
+                <img src="img/nusantaralogo.png" alt="Logo" class="w-12">
+                <span class="text-white text-shadow" style="font-size: 25px;">Hari Nusantara</span>
+                
+            </div>
+        </div>
+        <div class="flex w-70 justify-start font-bold space-x-6 ml-4 custom-font">
+            <a href="index.html" class="text-white-500 hover:text-blue-500 transition duration-200 text-shadow" style="color: white;">Beranda</a>
+            <a href="index.html#kegiatan" class="text-gray-500 hover:text-blue-500 transition duration-200 text-shadow" style="color: white">Kegiatan</a>
+            <div class="relative">
+                <button class="text-gray-500 hover:text-blue-500 transition duration-200 focus:outline-none text-shadow" style="color: white;">
+                    Jelajahi
+                </button>
+                <div class="absolute hidden mt-2 w-48 bg-white shadow-lg rounded-lg ring-1 ring-black ring-opacity-5 group-hover:block">
+                    <a href="index.html#samudera" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Kekayaan Samudera</a>
+                    <a href="index.html#budaya" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Budaya Nusantara</a>
+                </div>
+            </div>
+            <a href="galeri.html" class="text-gray-500 hover:text-blue-500 transition duration-200 text-shadow" style="color: white">Galeri</a>
+            <a href="index.html#tentang" class="text-gray-500 hover:text-blue-500 transition duration-200 text-shadow" style="color: white;">Tentang</a>
+        </div>
+    </div>
+</nav>
+<script>
+    // Script untuk menampilkan dropdown menu saat klik pada tombol
+    document.querySelector('button').addEventListener('click', function() {
+        const dropdownContent = this.nextElementSibling;
+        dropdownContent.classList.toggle('hidden');
+    });
+</script>
+<!-- End Navbar -->
+
+<!-- index.html Section -->
+<div id="indexSection" class="w-full h-screen bg-no-repeat bg-center bg-cover bg-fixed bg-scroll bg-changing" style="background-image: url('img/hayati1.jpeg');">
+    <div class="flex items-center justify-center min-h-screen px-28 py-24">
+        <div class="text-center">
+            <h1 class="text-7xl font-bold text-white text-shadow" style="font-size: 50px;">KEKAYAAN SAMUDERA - HAYATI</h1>
+            <h3 class="capitalize font-bold w-full mx-auto my-4 text-white whitespace-nowrap text-shadow" style="font-size: 25px;">Ekosistem Terumbu Karang Terbesar</h3>
+        </div>
+    </div>
+</div>
+<!-- End index.html Section -->
+
+<script>
+    // Background image URLs
+    const backgroundImages = [
+        'img/hayati2.jpeg',
+        'img/hayati3.jpeg',
+        'img/hayati4.jpeg',
+        'img/hayati5.jpeg'
+    ];
+
+    let currentIndex = 0;
+    const indexSection = document.getElementById('indexSection');
+
+    // Fungsi untuk mengganti background image
+    function changeBackground() {
+        currentIndex = (currentIndex + 1) % backgroundImages.length;
+        indexSection.style.backgroundImage = `url('${backgroundImages[currentIndex]}')`;
+        console.log(`Background changed to: ${backgroundImages[currentIndex]}`);
+    }
+
+    // ganti background setiap 5 seconds (5000 milliseconds)
+    setInterval(changeBackground, 3000);
+</script>
+
+    
+
+<div class="max-w-6xl mx-auto bg-white p-10 rounded-lg shadow-lg">
+    <div class="flex items-center mb-4">
+        <img src="img/kekayaansamudera1.jpeg" alt="bali" class="w-64 h-64 mr-4 object-cover rounded-full">
+        <div class="w-full md:w-2/3 pl-8"> 
+            <h1 class="capitalize text-3xl md:text-3xl font-bold my-2">
+                <span class="text-black-300">Kekayaan</span>
+                <span class="text-blue-800">Samudera - Hayati</span>
+            </h1><br>
+            <p class="w-4/4 my-4 text-gray-700">
+                Kekayaan samudera yang meliputi darat dan laut sering disebut sebagai ekosistem pesisir dan laut. Kekayaan ini mencakup semua sumber daya yang berada di wilayah laut, pesisir, dan daratan yang saling berhubungan, termasuk komponen hayati (biologis) dan non-hayati (fisik).<br><br>
+
+                Kekayaan hayati Indonesia di lautnya merupakan salah satu aset terbesar negara ini yang berkontribusi signifikan terhadap ekosistem global, ekonomi nasional, dan kesejahteraan masyarakat. Sebagai negara kepulauan terbesar di dunia, Indonesia memiliki wilayah laut yang luas dan beragam, menjadikannya surga bagi berbagai spesies laut dan ekosistem yang unik. 
+            </p>
+        </div>
+    </div>
+</div><br>
+
+
+<div class="max-w-6xl mx-auto bg-white p-10 rounded-lg shadow-lg">
+    <div>
+        <h2 class="text-3xl font-semibold flex items-center justify-center mb-4">Kekayaan Hayati Indonesia di Lautnya</h2><br><br>
+    
+        <div class="w-full my-4 text-gray-700 ml-4">
+            
+            <div class="max-w-6xl mx-auto bg-white p-4 rounded-lg shadow-lg">
+                <div class="flex items-center mb-4">
+                    <img src="hayati/terumbukarang.jpeg" alt="Terumbu Karang" class="w-full md:w-72 h-auto mr-6 rounded-[20px]">
+                    <div class="w-full">
+                        <h2 class="text-2xl text-green-900 font-bold">Terumbu Karang</h2>
+                        <p class="w-full md:w-4/5 my-4 text-gray-700">
+                            Terumbu karang adalah ekosistem bawah laut yang terdiri dari kumpulan karang yang membentuk struktur batuan yang keras. Karang ini terutama dibentuk oleh organisme kecil bernama polip karang, yang hidup dalam koloni besar. <br><br>
+                            Indonesia memiliki sekitar 18% dari total terumbu karang dunia, mencakup lebih dari 2.500 jenis terumbu karang.
+                            Terumbu karang ini menjadi habitat bagi ribuan spesies laut, mulai dari ikan hingga invertebrata.
+                        </p>
+                    </div>
+                </div>
+            </div><br>
+        
+            
+            <div class="w-full my-4 text-gray-700 ml-4">
+                <div class="max-w-6xl mx-auto bg-white p-4 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="hayati/ikanlaut.jpeg" alt="Ikan Laut" class="w-64 h-64 mr-4 object-cover rounded-full">
+                        <div class="w-full">
+                            <h2 class="text-2xl text-blue-900 font-bold">Ikan Laut</h2>
+                            <p class="w-full md:w-4/5 my-4 text-gray-700">
+                                Laut Indonesia adalah rumah bagi lebih dari 3.000 spesies ikan, termasuk ikan hias dan ikan ekonomis penting seperti:<br><br>
+                                Tuna, cakalang, dan tongkol, Kakap merah, kerapu, dan baronang, Ikan hias seperti clownfish (ikan nemo) dan angelfish.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+        
+           
+            <div class="max-w-6xl mx-auto bg-white p-4 rounded-lg shadow-lg">
+                <div class="flex items-center mb-4">
+                    <img src="hayati/mamalia.jpeg" alt="Mamalia Laut" class="w-full md:w-72 h-auto mr-6 rounded-[20px]">
+                    <div class="w-full">
+                        <h2 class="text-2xl text-green-900 font-bold">Mamalia Laut</h2>
+                        <p class="w-full md:w-4/5 my-4 text-gray-700">
+                            Lumba-lumba dan paus sering ditemukan di perairan Indonesia, terutama di daerah Selat Bali, Laut Banda, dan Laut Flores. <br><br>
+                            Dugong (duyung), mamalia laut yang langka, hidup di perairan dangkal seperti di Kepulauan Seribu dan Teluk Cenderawasih.
+
+
+                        </p>
+                    </div>
+                </div>
+            </div><br>
+        
+          
+            <div class="w-full my-4 text-gray-700 ml-4">
+                <div class="max-w-6xl mx-auto bg-white p-4 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="hayati/penyu.jpeg" alt="Penyu Laut" class="w-64 h-64 mr-4 object-cover rounded-full">
+                        <div class="w-full">
+                            <h2 class="text-2xl text-blue-900 font-bold">Penyu Laut</h2>
+                            <p class="w-full md:w-4/5 my-4 text-gray-700">
+                                Indonesia menjadi habitat untuk 6 dari 7 spesies penyu laut dunia:<br><br>
+                                Penyu hijau,Penyu sisik,Penyu belimbing,Penyu lekang,Penyu tempayan, Penyu pipih.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+        
+        
+            <div class="max-w-6xl mx-auto bg-white p-4 rounded-lg shadow-lg">
+                <div class="flex items-center mb-4">
+                    <img src="hayati/invertebrata.jpeg" alt="Invertebrata Laut" class="w-full md:w-72 h-auto mr-6 rounded-[20px]">
+                    <div class="w-full">
+                        <h2 class="text-2xl text-green-900 font-bold">Invertebrata Laut</h2>
+                        <p class="w-full md:w-4/5 my-4 text-gray-700">
+                            Beragam jenis invertebrata seperti karang lunak, kerang, bulu babi, bintang laut, dan ubur-ubur hidup di lautan Indonesia.<br><br>
+                            Lobster, kepiting, dan udang juga menjadi sumber daya penting.
+                        </p>
+                    </div>
+                </div>
+            </div><br>
+        
+            
+            <div class="w-full my-4 text-gray-700 ml-4">
+                <div class="max-w-6xl mx-auto bg-white p-4 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="hayati/mangrove.jpeg" alt="Mangrove dan Padang Lamun" class="w-64 h-64 mr-4 object-cover rounded-full">
+                        <div class="w-full">
+                            <h2 class="text-2xl text-blue-900 font-bold">Mangrove dan Padang Lamun</h2>
+                            <p class="w-full md:w-4/5 my-4 text-gray-700">
+                                Laut Indonesia adalah rumah bagi lebih dari 3.000 spesies ikan, termasuk ikan hias dan ikan ekonomis penting seperti:<br><br>
+                                Tuna, cakalang, dan tongkol, Kakap merah, kerapu, dan baronang, Ikan hias seperti clownfish (ikan nemo) dan angelfish.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+        
+        
+            
+            <div class="w-full my-4 text-gray-700 ml-4">
+                <div class="max-w-6xl mx-auto bg-white p-4 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="hayati/endemik.jpeg" alt="Spesies Laut Endemik" class="w-64 h-64 mr-4 object-cover rounded-full">
+                        <div class="w-full">
+                            <h2 class="text-2xl text-green-900 font-bold">Spesies Laut Endemik</h2>
+                            <p class="w-full md:w-4/5 my-4 text-gray-700">
+                                •	Beberapa spesies laut hanya ditemukan di Indonesia, seperti ikan coelacanth di Sulawesi dan beberapa spesies karang endemik di Papua.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div><br>     
+              <a href="galeri.html#hayati">
+                <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300">
+                    Lihat Galeri Hayati
+                </button>
+            </a>
+        </div>
+<br>
+        </div></div></div>
+        
+        <div class="px-6 py-5 md:px-28 md:py-10 flex flex-col items-center justify-center my-10">
+            <!-- Konten Teks (optional) -->
+            <div class="w-full text-center mt-6">
+                <h1 class="text-3xl font-bold text-gray-900">Video Kekayaan Samudera - Hayati</h1>
+            </div><br><br>
+            <!-- Embed YouTube Video -->
+            <div class="w-full md:w-3/4">
+                <iframe width="100%" height="500" src="https://www.youtube.com/embed/dEnplvG7jEE?si=r9k9qdrK0-x4tyDb" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+                            
+   
+                    <section class="client bg-gray-100 py-16">
+                        <div class="container mx-auto">
+                            <h2 class="text-3xl font-semibold text-center mb-8">Apa Yang Orang Katakan?</h2>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <div class="bg-white rounded-lg shadow-lg p-6">
+                                    <img src="img/cewek1.jpeg" alt="client" class="rounded-full w-20 h-20 mx-auto mb-4">
+                                    <p class="text-gray-700 text-center">
+                                        Website ini keren banget, terutama bagian kekayaan lautnya! Ada banyak info tentang ikan-ikan dan penyu - penyu unik Indonesia, seperti ikan kakap merah dan penyu belimbing yang gede banget, yang jarang ditemukan di tempat lain. Selain itu, terumbu karang dan mamalia laut juga jadi highlight yang menarik untuk menunjukkan betapa kayanya ekosistem laut kita.
+                                    </p>
+                                </div>
+                    
+                                <div class="bg-white rounded-lg shadow-lg p-6">
+                                    <img src="img/cewek2.jpeg" alt="client" class="rounded-full w-20 h-20 mx-auto mb-4">
+                                    <p class="text-gray-700 text-center">
+                                        Memberikan wawasan yang sangat berguna tentang kekayaan samudra Indonesia dan bagaimana hal tersebut dapat dimanfaatkan dengan bijak untuk keberlanjutan ekonomi, sosial, dan lingkungan. Bisa menjadi alat pendidikan yang efektif dalam mempromosikan konservasi dan perlindungan lingkungan laut.
+                                    </p>
+                                </div>
+                    
+                                <div class="bg-white rounded-lg shadow-lg p-6">
+                                    <img src="img/cewek3.jpeg" alt="client" class="rounded-full w-20 h-20 mx-auto mb-4">
+                                    <p class="text-gray-700 text-center">
+                                        Website ini keren banget, terutama bagian kekayaan lautnya! Ada banyak info tentang ikan-ikan dan penyu - penyu unik Indonesia, seperti ikan kakap merah dan penyu belimbing yang gede banget, yang jarang ditemukan di tempat lain. Selain itu, terumbu karang dan mamalia laut juga jadi highlight yang menarik untuk menunjukkan betapa kayanya ekosistem laut kita.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+   <!-- footer -->
+   <footer class="footer bg-gray-800 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="footer_col">
+                <div class="flex items-center">
+                    <img src="img/nusantaralogo.png" alt="Logo" class="w-14 mr-2">
+                    <h3 class="text-4xl font-semibold">Hari Nusantara</h3>
+                </div>
+                <p class="mt-4 leading-7">
+                    Nusantara hadir untuk merayakan keindahan budaya dan kekayaan samudera Indonesia. Melalui cerita, gambar, dan eksplorasi, kami ingin meningkatkan kesadaran serta apresiasi terhadap warisan nusantara yang memukau. Bersama, mari lestarikan keindahan negeri kita.
+                </p>
+                <p class="mt-4 leading-7">
+                    <em>Dibuat dengan ❤️ oleh Tim Nusantara.</em>
+                </p>
+            </div>            
+            <div class="footer_col ml-10">
+                <h4 class="text-2xl font-semibold">Kegiatan Hari Nusantara di Media Sosial</h4>
+                <div class="flex items-center mt-2">
+                    <a href="https://www.instagram.com/p/DCqdi07zZFA/?utm_source=ig_web_copy_link" target="_blank" class="flex items-center">
+                        <p class="text-gray-500 hover:text-white hover:underline">Bazaar UMK di Kabupaten Berau - Instagram</p>
+                    </a>
+                </div>
+                
+                <div class="flex items-center mt-2">
+                    <a href="https://www.instagram.com/p/DDinF7PBrdZ/?utm_source=ig_web_copy_link" target="_blank" class="flex items-center">
+                        <p class="text-gray-500 hover:text-white hover:underline">Upacara dan Pameran UMKM di Aceh - Instagram</p>
+                    </a>
+                </div>
+                
+                <div class="flex items-center mt-2">
+                    <a href="https://vt.tiktok.com/ZS6RXkAWe/" target="_blank" class="flex items-center">
+                        <p class="text-gray-500 hover:text-white hover:underline">Peringatan Hari Nusantara di Kepulauan Tidore - Tiktok</p>
+                    </a>
+                </div>
+
+                <div class="flex items-center mt-2">
+                    <a href="https://vt.tiktok.com/ZS6R4L3oF/" target="_blank" class="flex items-center">
+                        <p class="text-gray-500 hover:text-white hover:underline">Bakti Sosial Makan Gratis di Papua - Tiktok</p>
+                    </a>
+                </div>
+
+                <div class="flex items-center mt-2">
+                    <a href="https://www.facebook.com/reel/2570197236513918?mibextid=rS40aB7S9Ucbxw6v" target="_blank" class="flex items-center">
+                        <p class="text-gray-500 hover:text-white hover:underline">Hari Nusantara di Kabupaten Bulungan - Youtube</p>
+                    </a>
+                </div>
+
+                <div class="flex items-center mt-2">
+                    <a href="https://www.facebook.com/reel/596052582840320?mibextid=rS40aB7S9Ucbxw6v" target="_blank" class="flex items-center">
+                        <p class="text-gray-500 hover:text-white hover:underline">Upacara Peringatan di Yogyakarta - Facebook</p>
+                    </a>
+                </div>
+                
+            </div>
+            
+            <div class="footer_col">
+                <h4 class="text-2xl font-semibold">Situs Kebudayaan Indonesia</h4>
+                
+                <div class="flex items-center mt-2">
+                    <a href="https://indonesiakaya.com/" target="_blank" class="flex items-center">
+                        <p class="text-gray-500 hover:text-white hover:underline">Situs Kebudayaan Indonesia</p>
+                    </a>
+                </div>
+                
+                <div class="flex items-center mt-2">
+                    <a href="https://budaya-indonesia.org/" target="_blank" class="flex items-center">
+                        <p class="text-gray-500 hover:text-white hover:underline">Budaya Indonesia</p>
+                    </a>
+                </div>
+                
+                <div class="flex items-center mt-2">
+                    <a href="https://budaya-data.kemdikbud.go.id/" target="_blank" class="flex items-center">
+                        <p class="text-gray-500 hover:text-white hover:underline">Budaya Kita</p>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        <div class="mt-8 border-t border-gray-600 pt-8 text-center">
+            Copyright © 2024 Nusantara. Semua hak dilindungi undang-undang
+        </div>
+    </div>
+</footer>
+<!-- end footer -->
+            </div>
+        </div>
+    </div>
+
+    
+    
+    
+</body>
+</html>

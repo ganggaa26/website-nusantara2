@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- logo tab -->
+    <link rel="icon" href="img/nusantaralogo.png" type="image/x-icon">
+
+    <!-- Favicon tambahan untuk resolusi tinggi -->
+    <link rel="apple-touch-icon" href="img/nusantaralogo.png">
+    <link rel="icon" href="img/nusantaralogo.png" type="image/png" sizes="32">
+    <link rel="icon" href="img/nusantaralogo.png" type="image/png" sizes="16">
+    
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <title>Galeri Nusantara</title>
+    <style>
+        .bg-changing {
+            background-size: cover;
+            background-position: center;
+            transition: background-image 0.5s ease-out;
+        }
+        .crop {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+        .crop img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+        }
+        .custom-font {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 800;
+            letter-spacing: 0.8px;
+        }
+        .text-shadow {
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), /* Bayangan utama */
+                     -2px -2px 5px rgba(0, 0, 0, 0.2), /* Bayangan tambahan */
+                     3px 3px 5px rgba(0, 0, 0, 0.2);  /* Bayangan tambahan */
+        }
+ 
+    </style>
+</head>
+<body>
+
+<!--nav start-->
+<nav class="fixed w-full shadow p-4 px-28 bg-black bg-opacity-20 z-50">
+    <div class="flex justify-between items-center">
+        <div class="flex items-center w-80">
+            <!-- Container text dan logo -->
+            <div class="text-xl font-bold flex items-center space-x-2">
+                <img src="img/nusantaralogo.png" alt="Logo" class="w-12">
+                <span class="text-white text-shadow" style="font-size: 25px;">Hari Nusantara</span>
+                
+            </div>
+        </div>
+        <div class="flex w-70 justify-start font-bold space-x-6 ml-4 custom-font">
+            <a href="index.html" class="text-white-500 hover:text-blue-500 transition duration-200 text-shadow" style="color: white;">Beranda</a>
+            <a href="index.html#kegiatan" class="text-gray-500 hover:text-blue-500 transition duration-200 text-shadow" style="color: white">Kegiatan</a>
+            <div class="relative">
+                <button class="text-gray-500 hover:text-blue-500 transition duration-200 focus:outline-none text-shadow" style="color: white;">
+                    Jelajahi
+                </button>
+                <div class="absolute hidden mt-2 w-48 bg-white shadow-lg rounded-lg ring-1 ring-black ring-opacity-5 group-hover:block">
+                    <a href="index.html#samudera" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Kekayaan Samudera</a>
+                    <a href="index.html#budaya" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Budaya Nusantara</a>
+                </div>
+            </div>
+            <a href="galeri.html" class="text-gray-500 hover:text-blue-500 transition duration-200 text-shadow" style="color: white">Galeri</a>
+            <a href="index.html#tentang" class="text-gray-500 hover:text-blue-500 transition duration-200 text-shadow" style="color: white;">Tentang</a>
+        </div>
+    </div>
+</nav>
+<script>
+    // Script untuk menampilkan dropdown menu saat klik pada tombol
+    document.querySelector('button').addEventListener('click', function() {
+        const dropdownContent = this.nextElementSibling;
+        dropdownContent.classList.toggle('hidden');
+    });
+</script>
+<!-- End Navbar -->
+
+<!-- AOS Script and Stylesheet -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    AOS.init();
+  });
+</script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+<!-- kegiatan hari nusantara -->
+<section id="kegiatan">
+    <div class="h-screen flex flex-col items-center justify-center" data-aos="fade-up" data-aos-duration="2000"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <h1 class="px-8 py-4 text-5xl font-bold text-blue-800 mb-8">Galeri</h1>
+        <h1 class="px-8 py-4 text-4xl font-bold text-black mb-8">Kegiatan Hari Nusantara</h1>
+        <div class="grid grid-cols-4 gap-4 w-full max-w-screen-lg max-h-screen-lg p-4">
+            <div class="col-span-2 row-span-2">
+                <img src="kegiatan/bg2.jpeg" alt="Image 1" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div class="col-span-2">
+                <img src="kegiatan/bg3.jpeg" alt="Image 2" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="kegiatan/bg4.jpg" alt="Image 3" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="kegiatan/bg5.jpeg" alt="Image 4" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+        </div>
+    </div><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div class="h-screen flex flex-col items-center justify-center" data-aos="fade-up" data-aos-duration="2000">
+        <div class="grid grid-cols-4 gap-4 w-full max-w-screen-lg max-h-screen-lg p-4">
+            <div class="col-span-2 row-span-2">
+                <img src="kegiatan/pidato.jpeg" alt="Image 1" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div class="col-span-2">
+                <img src="kegiatan/pembersihan.jpeg" alt="Image 2" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="kegiatan/webinar.jpeg" alt="Image 3" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="kegiatan/upacara.jpeg" alt="Image 4" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+        </div>
+    </div><br><br>
+
+    <div class="px-6 py-5 md:px-28 md:py-10 flex flex-col items-center justify-center my-10" data-aos="fade-up" data-aos-duration="2000">
+        <!-- Konten Teks (optional) -->
+        <div class="w-full text-center mt-6">
+            <h1 class="text-3xl font-bold text-gray-900">Video Kegiatan Hari Nusantara</h1>
+        </div><br><br>
+        <!-- Embed YouTube Video -->
+        <div class="w-full md:w-3/4">
+            <iframe width="100%" height="500" src="https://www.youtube.com/embed/4D1c2YQbZMw?si=0eG1Rv98dathw2qF" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div><br><br><br>
+    
+    
+</section>
+
+<!-- Hayati Section -->
+<section id="hayati">
+    <div class="h-screen flex flex-col items-center justify-center" data-aos="fade-up" data-aos-duration="2000"><br><br><br><br><br><br><br><br><br><br><br><br>
+       
+        <h1 class="px-8 py-4 text-4xl font-bold text-black mb-8">Kekayaan Samudera - Hayati</h1>
+        <div class="grid grid-cols-4 gap-4 w-full max-w-screen-lg max-h-screen-lg p-4">
+            <div class="col-span-2 row-span-2">
+                <img src="hayati/endemik.jpeg" alt="Image 1" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div class="col-span-2">
+                <img src="hayati/ikanlaut.jpeg" alt="Image 2" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="hayati/invertebrata.jpeg" alt="Image 3" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="hayati/mamalia.jpeg" alt="Image 4" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+        </div>
+    </div><br><br><br><br><br><br><br><br><br>
+
+    <div class="h-screen flex flex-col items-center justify-center" data-aos="fade-up" data-aos-duration="2000">
+        <div class="grid grid-cols-4 gap-4 w-full max-w-screen-lg max-h-screen-lg p-4">
+            <div class="col-span-2 row-span-2">
+                <img src="hayati/mangrove.jpeg" alt="Image 1" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div class="col-span-2">
+                <img src="hayati/penyu.jpeg" alt="Image 2" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="hayati/terumbukarang.jpeg" alt="Image 3" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="hayati/invertebrata1.jpeg" alt="Image 4" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+        </div>
+    </div><br><br>
+
+    <div class="px-6 py-5 md:px-28 md:py-10 flex flex-col items-center justify-center my-10" data-aos="fade-up" data-aos-duration="2000">
+        <!-- Konten Teks (optional) -->
+        <div class="w-full text-center mt-6">
+            <h1 class="text-3xl font-bold text-gray-900">Video Kekayaan Samudera - Hayati</h1>
+        </div><br><br>
+        <!-- Embed YouTube Video -->
+        <div class="w-full md:w-3/4">
+            <iframe width="100%" height="500" src="https://www.youtube.com/embed/dEnplvG7jEE?si=r9k9qdrK0-x4tyDb" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div><br><br><br>
+    
+</section>
+
+<!-- Non-Hayati Section -->
+<section id="nonhayati">
+    <div class="h-screen flex flex-col items-center justify-center" data-aos="fade-up" data-aos-duration="2000">
+        <h1 class="px-8 py-4 text-4xl font-bold text-black mb-8">Kekayaan Samudera - Non Hayati</h1>
+        <div class="grid grid-cols-4 gap-4 w-full max-w-screen-lg max-h-screen-lg p-4">
+            <div class="col-span-2 row-span-2">
+                <img src="nonhayati/hayati1.jpg" alt="Image 1" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div class="col-span-2">
+                <img src="nonhayati/hayati3.jpeg" alt="Image 2" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="nonhayati/hayati4.jpg" alt="Image 3" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="nonhayati/hayati7.jpeg" alt="Image 4" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+        </div>
+    </div>
+
+    <div class="h-screen flex flex-col items-center justify-center" data-aos="fade-up" data-aos-duration="2000">
+        <div class="grid grid-cols-4 gap-4 w-full max-w-screen-lg max-h-screen-lg p-4">
+            <div class="col-span-2 row-span-2">
+                <img src="nonhayati/pasir.jpeg" alt="Image 1" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div class="col-span-2">
+                <img src="nonhayati/laut.jpeg" alt="Image 2" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="nonhayati/minyak.jpeg" alt="Image 3" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="nonhayati/hayati5.jpg" alt="Image 4" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+        </div>
+    </div><br><br>
+
+    <div class="px-6 py-5 md:px-28 md:py-10 flex flex-col items-center justify-center my-10" data-aos="fade-up" data-aos-duration="2000">
+        <!-- Konten Teks (optional) -->
+        <div class="w-full text-center mt-6">
+           <h1 class="text-3xl font-bold text-gray-900">Video Kekayaan Samudera - Non Hayati</h1>
+       </div><br><br>
+       <!-- Embed YouTube Video -->
+       <div class="w-full md:w-3/4">
+           <iframe width="100%" height="500" src="https://www.youtube.com/embed/kYPkhWq4ADE?si=Q7nWyW7Qbq5Dh8uK"" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       </div>
+    </div><br><br><br><br><br><br><br><br><br>
+</section>
+
+            
+                <!-- Include AOS Library -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    AOS.init();
+  });
+</script>
+
+<!-- Link to AOS CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+<!-- Bali Section with AOS Animations -->
+<section id="bali">
+    <div class="h-screen flex flex-col items-center justify-center" data-aos="fade-up" data-aos-duration="2000">
+        <h1 class="px-8 py-4 text-4xl font-bold text-black mb-8">Budaya Nusantara - Bali</h1>
+        <div class="grid grid-cols-4 gap-4 w-full max-w-screen-lg max-h-screen-lg p-4">
+            <div class="col-span-2 row-span-2">
+                <img src="img/alam2.jpg" alt="Image 1" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div class="col-span-2">
+                <img src="img/balisejarah.jpeg" alt="Image 2" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="Bali/pengantin.jpg" alt="Image 3" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="Bali/pengantin4.jpeg" alt="Image 4" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+        </div><br><br><br><br><br><br>
+    </div>
+
+    <div class="h-screen flex flex-col items-center justify-center" data-aos="fade-up" data-aos-duration="2000">
+        <div class="grid grid-cols-4 gap-4 w-full max-w-screen-lg max-h-screen-lg p-4">
+            <div class="col-span-2 row-span-2">
+                <img src="Bali/kecak.jpeg" alt="Image 1" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div class="col-span-2">
+                <img src="Bali/gamelan.jpg" alt="Image 2" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="Bali/ngaben.jpg" alt="Image 3" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="Bali/rumah.jpg" alt="Image 4" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+        </div>
+    </div><br>
+
+    <div class="px-6 py-5 md:px-28 md:py-10 flex flex-col items-center justify-center my-10" data-aos="fade-up" data-aos-duration="2000">
+        <!-- Konten Teks (optional) -->
+        <div class="w-full text-center mt-6">
+           <h1 class="text-3xl font-bold text-gray-900">Video Budaya dan Tradisi Bali</h1>
+       </div><br><br>
+       <!-- Embed YouTube Video -->
+       <div class="w-full md:w-3/4">
+           <iframe width="100%" height="500" src="https://www.youtube.com/embed/I0yMwO8RbHg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       </div>
+    </div><br><br><br><br><br><br><br><br><br><br><br>
+</section>
+
+<!-- Yogyakarta Section with AOS Animations -->
+<section id="yogyakarta">
+    <div class="h-screen flex flex-col items-center justify-center" data-aos="fade-up" data-aos-duration="2000">
+        <h1 class="px-8 py-4 text-4xl font-bold text-black mb-8">Budaya Nusantara - Yogyakarta</h1>
+        <div class="grid grid-cols-4 gap-4 w-full max-w-screen-lg max-h-screen-lg p-4">
+            <div class="col-span-2 row-span-2">
+                <img src="img/yogyakarta.jpeg" alt="Image 1" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div class="col-span-2">
+                <img src="img/yogyakarta1.jpg" alt="Image 2" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="img/yogyakarta2.jpg" alt="Image 3" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="Yogyakarta/pengantin2.jpg" alt="Image 4" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+        </div><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+
+    <div class="h-screen flex flex-col items-center justify-center" data-aos="fade-up" data-aos-duration="2000">
+        <div class="grid grid-cols-4 gap-4 w-full max-w-screen-lg max-h-screen-lg p-4">
+            <div class="col-span-2 row-span-2">
+                <img src="Yogyakarta/tari.webp" alt="Image 1" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div class="col-span-2">
+                <img src="Yogyakarta/musik.png" alt="Image 2" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="Yogyakarta/rumah.jpg" alt="Image 3" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="Yogyakarta/upacara3.jpg" alt="Image 4" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+        </div>
+    </div><br><br>
+
+    <div class="px-6 py-5 md:px-28 md:py-10 flex flex-col items-center justify-center my-10" data-aos="fade-up" data-aos-duration="2000">
+        <!-- Konten Teks (optional) -->
+        <div class="w-full text-center mt-6">
+           <h1 class="text-3xl font-bold text-gray-900">Video Budaya dan Tradisi Yogyakarta</h1>
+       </div><br><br>
+       <!-- Embed YouTube Video -->
+       <div class="w-full md:w-3/4">
+           <iframe width="100%" height="500" src="https://www.youtube.com/embed/M1QbBM0PlcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       </div>
+    </div><br><br><br><br><br><br>
+</section>
+
+                            
+                        <!-- Include AOS Library -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    AOS.init();
+  });
+</script>
+
+<!-- Link to AOS CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+<!-- Papua Section with AOS Animations -->
+<section id="papua">
+    <div class="h-screen flex flex-col items-center justify-center" data-aos="fade-up" data-aos-duration="2000">
+        <h1 class="px-8 py-4 text-4xl font-bold text-black mb-8">Budaya Nusantara - Papua</h1>
+        <div class="grid grid-cols-4 gap-4 w-full max-w-screen-lg max-h-screen-lg p-4">
+            <div class="col-span-2 row-span-2">
+                <img src="img/papua1.jpg" alt="Image 1" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div class="col-span-2">
+                <img src="Papua/orang1.jpg" alt="Image 2" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="Papua/pengantin.jpg" alt="Image 3" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="Papua/tari.jpg" alt="Image 4" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+        </div>
+    </div><br><br><br><br><br><br>
+
+    <div class="h-screen flex flex-col items-center justify-center" data-aos="fade-up" data-aos-duration="2000">
+        <div class="grid grid-cols-4 gap-4 w-full max-w-screen-lg max-h-screen-lg p-4">
+            <div class="col-span-2 row-span-2">
+                <img src="Papua/musik.png" alt="Image 1" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div class="col-span-2">
+                <img src="Papua/rumah.jpg" alt="Image 2" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="Papua/upacara.webp" alt="Image 3" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="Papua/pengantin1.jpg" alt="Image 4" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+        </div>
+    </div><br><br><br>
+    <div class="px-6 py-5 md:px-28 md:py-10 flex flex-col items-center justify-center my-10" data-aos="fade-up" data-aos-duration="2000">
+        <!-- Konten Teks (optional) -->
+        <div class="w-full text-center mt-6">
+           <h1 class="text-3xl font-bold text-gray-900">Video Budaya dan Tradisi Papua</h1>
+       </div><br><br>
+       <!-- Embed YouTube Video -->
+       <div class="w-full md:w-3/4">
+           <iframe width="100%" height="500" src="https://www.youtube.com/embed/orwD8RZfNVA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       </div>
+    </div><br><br><br><br><br><br>
+</section>
+
+<!-- Aceh Section with AOS Animations -->
+<section id="aceh">
+    <div class="h-screen flex flex-col items-center justify-center" data-aos="fade-up" data-aos-duration="2000">
+        <h1 class="px-8 py-4 text-4xl font-bold text-black mb-8">Budaya Nusantara - Aceh</h1>
+        <div class="grid grid-cols-4 gap-4 w-full max-w-screen-lg max-h-screen-lg p-4">
+            <div class="col-span-2 row-span-2">
+                <img src="img/aceh3.jpg" alt="Image 1" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div class="col-span-2">
+                <img src="img/aceh2.webp" alt="Image 2" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="Aceh/pakaian1.jpeg" alt="Image 3" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="Aceh/tari2.JPG" alt="Image 4" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+        </div>
+    </div>
+
+    <div class="h-screen flex flex-col items-center justify-center" data-aos="fade-up" data-aos-duration="2000">
+        <div class="grid grid-cols-4 gap-4 w-full max-w-screen-lg max-h-screen-lg p-4">
+            <div class="col-span-2 row-span-2">
+                <img src="Aceh/rumah.jpg" alt="Image 1" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div class="col-span-2">
+                <img src="Aceh/musik3.jpeg" alt="Image 2" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="Aceh/upacara4.webp" alt="Image 3" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="Aceh/sejarah.jpeg" alt="Image 4" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+        </div>
+    </div><br>
+    <div class="px-6 py-5 md:px-28 md:py-10 flex flex-col items-center justify-center my-10" data-aos="fade-up" data-aos-duration="2000">
+        <!-- Konten Teks (optional) -->
+        <div class="w-full text-center mt-6">
+           <h1 class="text-3xl font-bold text-gray-900">Video Budaya dan Tradisi Aceh</h1>
+       </div><br><br>
+       <!-- Embed YouTube Video -->
+       <div class="w-full md:w-3/4">
+           <iframe width="100%" height="500" src="https://www.youtube.com/embed/Dxy-fm2ep7A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       </div>
+    </div><br><br><br><br><br><br><br><br>
+</section>
+<!-- Include AOS Library -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    AOS.init();
+  });
+</script>
+
+<!-- Link to AOS CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+<!-- Lampung Section with AOS Animations -->
+<section id="lampung">
+    <div class="h-screen flex flex-col items-center justify-center" data-aos="fade-up" data-aos-duration="2000">
+        <h1 class="px-8 py-4 text-4xl font-bold text-black mb-8">Budaya Nusantara - Lampung</h1>
+        <div class="grid grid-cols-4 gap-4 w-full max-w-screen-lg max-h-screen-lg p-4">
+            <div class="col-span-2 row-span-2">
+                <img src="img/lampung2.avif" alt="Image 1" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div class="col-span-2">
+                <img src="img/lampung.jpeg" alt="Image 2" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="Lampung/pakaian2.webp" alt="Image 3" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="Lampung/tari4.jpg" alt="Image 4" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+        </div>
+    </div><br><br><br><br>
+
+    <div class="h-screen flex flex-col items-center justify-center" data-aos="fade-up" data-aos-duration="2000">
+        <div class="grid grid-cols-4 gap-4 w-full max-w-screen-lg max-h-screen-lg p-4">
+            <div class="col-span-2 row-span-2">
+                <img src="Lampung/musik.jpeg" alt="Image 1" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div class="col-span-2">
+                <img src="Lampung/rumah.jpg" alt="Image 2" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="Lampung/upacara1.jpg" alt="Image 3" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+            <div>
+                <img src="Lampung/pakaian4.jpg" alt="Image 4" class="object-cover w-full h-full transition-transform transform hover:scale-105">
+            </div>
+        </div>
+    </div><br>
+    <div class="px-6 py-5 md:px-28 md:py-10 flex flex-col items-center justify-center my-10" data-aos="fade-up" data-aos-duration="2000">
+        <!-- Konten Teks (optional) -->
+        <div class="w-full text-center mt-6">
+           <h1 class="text-3xl font-bold text-gray-900">Video Budaya dan Tradisi Lampung</h1>
+       </div><br><br>
+       <!-- Embed YouTube Video -->
+       <div class="w-full md:w-3/4">
+           <iframe width="100%" height="500" src="https://www.youtube.com/embed/GaqJF8d7uFo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       </div>
+    </div><br><br><br><br><br><br>
+</section>
+
+                
+
+   <!-- footer -->
+   <footer class="footer bg-gray-800 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="footer_col">
+                <div class="flex items-center">
+                    <img src="img/nusantaralogo.png" alt="Logo" class="w-14 mr-2">
+                    <h3 class="text-4xl font-semibold">Hari Nusantara</h3>
+                </div>
+                <p class="mt-4 leading-7">
+                    Nusantara hadir untuk merayakan keindahan budaya dan kekayaan samudera Indonesia. Melalui cerita, gambar, dan eksplorasi, kami ingin meningkatkan kesadaran serta apresiasi terhadap warisan nusantara yang memukau. Bersama, mari lestarikan keindahan negeri kita.
+                </p>
+                <p class="mt-4 leading-7">
+                    <em>Dibuat dengan ❤️ oleh Tim Nusantara.</em>
+                </p>
+            </div>            
+            <div class="footer_col ml-10">
+                <h4 class="text-2xl font-semibold">Kegiatan Hari Nusantara di Media Sosial</h4>
+                <div class="flex items-center mt-2">
+                    <a href="https://www.instagram.com/p/DCqdi07zZFA/?utm_source=ig_web_copy_link" target="_blank" class="flex items-center">
+                        <p class="text-gray-500 hover:text-white hover:underline">Bazaar UMK di Kabupaten Berau - Instagram</p>
+                    </a>
+                </div>
+                
+                <div class="flex items-center mt-2">
+                    <a href="https://www.instagram.com/p/DDinF7PBrdZ/?utm_source=ig_web_copy_link" target="_blank" class="flex items-center">
+                        <p class="text-gray-500 hover:text-white hover:underline">Upacara dan Pameran UMKM di Aceh - Instagram</p>
+                    </a>
+                </div>
+                
+                <div class="flex items-center mt-2">
+                    <a href="https://vt.tiktok.com/ZS6RXkAWe/" target="_blank" class="flex items-center">
+                        <p class="text-gray-500 hover:text-white hover:underline">Peringatan Hari Nusantara di Kepulauan Tidore - Tiktok</p>
+                    </a>
+                </div>
+
+                <div class="flex items-center mt-2">
+                    <a href="https://vt.tiktok.com/ZS6R4L3oF/" target="_blank" class="flex items-center">
+                        <p class="text-gray-500 hover:text-white hover:underline">Bakti Sosial Makan Gratis di Papua - Tiktok</p>
+                    </a>
+                </div>
+
+                <div class="flex items-center mt-2">
+                    <a href="https://www.facebook.com/reel/2570197236513918?mibextid=rS40aB7S9Ucbxw6v" target="_blank" class="flex items-center">
+                        <p class="text-gray-500 hover:text-white hover:underline">Hari Nusantara di Kabupaten Bulungan - Youtube</p>
+                    </a>
+                </div>
+
+                <div class="flex items-center mt-2">
+                    <a href="https://www.facebook.com/reel/596052582840320?mibextid=rS40aB7S9Ucbxw6v" target="_blank" class="flex items-center">
+                        <p class="text-gray-500 hover:text-white hover:underline">Upacara Peringatan di Yogyakarta - Facebook</p>
+                    </a>
+                </div>
+                
+            </div>
+            
+            <div class="footer_col">
+                <h4 class="text-2xl font-semibold">Situs Kebudayaan Indonesia</h4>
+                
+                <div class="flex items-center mt-2">
+                    <a href="https://indonesiakaya.com/" target="_blank" class="flex items-center">
+                        <p class="text-gray-500 hover:text-white hover:underline">Situs Kebudayaan Indonesia</p>
+                    </a>
+                </div>
+                
+                <div class="flex items-center mt-2">
+                    <a href="https://budaya-indonesia.org/" target="_blank" class="flex items-center">
+                        <p class="text-gray-500 hover:text-white hover:underline">Budaya Indonesia</p>
+                    </a>
+                </div>
+                
+                <div class="flex items-center mt-2">
+                    <a href="https://budaya-data.kemdikbud.go.id/" target="_blank" class="flex items-center">
+                        <p class="text-gray-500 hover:text-white hover:underline">Budaya Kita</p>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        <div class="mt-8 border-t border-gray-600 pt-8 text-center">
+            Copyright © 2024 Nusantara. Semua hak dilindungi undang-undang
+        </div>
+    </div>
+</footer>
+<!-- end footer -->
+</body>
+</html>

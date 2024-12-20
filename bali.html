@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+        <!-- logo tab -->
+        <link rel="icon" href="img/nusantaralogo.png" type="image/x-icon">
+
+        <!-- Favicon tambahan untuk resolusi tinggi -->
+        <link rel="apple-touch-icon" href="img/nusantaralogo.png">
+        <link rel="icon" href="img/nusantaralogo.png" type="image/png" sizes="50">
+        <link rel="icon" href="img/nusantaralogo.png" type="image/png" sizes="20">
+    
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <title>Budaya Nusantara - Bali</title>
+    <style>
+        .bg-changing {
+            background-size: cover;
+            background-position: center;
+            transition: background-image 0.5s ease-out;
+        }
+        .crop {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+        .crop img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+        }
+        .custom-font {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 800;
+            letter-spacing: 0.8px;
+        }
+        .text-shadow {
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), /* Bayangan utama */
+                     -2px -2px 5px rgba(0, 0, 0, 0.2), /* Bayangan tambahan */
+                     3px 3px 5px rgba(0, 0, 0, 0.2);  /* Bayangan tambahan */
+        }
+ 
+    </style>
+</head>
+<body>
+
+    <!--nav start-->
+    <nav class="fixed w-full shadow p-4 px-28 bg-black bg-opacity-20 z-50">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center w-80">
+            <!-- Container text dan logo -->
+            <div class="text-xl font-bold flex items-center space-x-2">
+                <img src="img/nusantaralogo.png" alt="Logo" class="w-12">
+                <span class="text-white text-shadow" style="font-size: 25px;">Hari Nusantara</span>
+                
+            </div>
+        </div>
+        <div class="flex w-70 justify-start font-bold space-x-6 ml-4 custom-font">
+            <a href="index.html" class="text-white-500 hover:text-blue-500 transition duration-200 text-shadow" style="color: white;">Beranda</a>
+            <a href="index.html#kegiatan" class="text-gray-500 hover:text-blue-500 transition duration-200 text-shadow" style="color: white">Kegiatan</a>
+            <div class="relative">
+                <button class="text-gray-500 hover:text-blue-500 transition duration-200 focus:outline-none text-shadow" style="color: white;">
+                    Jelajahi
+                </button>
+                <div class="absolute hidden mt-2 w-48 bg-white shadow-lg rounded-lg ring-1 ring-black ring-opacity-5 group-hover:block">
+                    <a href="index.html#samudera" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Kekayaan Samudera</a>
+                    <a href="index.html#budaya" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Budaya Nusantara</a>
+                </div>
+            </div>
+            <a href="galeri.html" class="text-gray-500 hover:text-blue-500 transition duration-200 text-shadow" style="color: white">Galeri</a>
+            <a href="index.html#tentang" class="text-gray-500 hover:text-blue-500 transition duration-200 text-shadow" style="color: white;">Tentang</a>
+        </div>
+    </div>
+</nav>
+<script>
+    // Script untuk menampilkan dropdown menu saat klik pada tombol
+    document.querySelector('button').addEventListener('click', function() {
+        const dropdownContent = this.nextElementSibling;
+        dropdownContent.classList.toggle('hidden');
+    });
+</script>
+<!-- End Navbar -->
+
+<!-- index.html Section -->
+<div id="index.htmlSection" class="w-full h-screen bg-no-repeat bg-center bg-cover bg-fixed bg-scroll bg-changing" style="background-image: url('img/alam2.jpg');">
+    <div class="flex items-center justify-center min-h-screen px-28 py-24">
+        <div class="text-center">
+            <h1 class="text-7xl font-bold text-white text-shadow" style="font-size: 50px;">BALI</h1>
+            <h3 class="capitalize font-bold w-full mx-auto my-4 text-white whitespace-nowrap text-shadow" style="font-size: 25px;">Pulau Seribu Pura dan Keindahan Alam</h3>
+        </div>
+    </div>
+</div>
+<!-- End index.html Section -->
+
+<div class="px-28 p-5 pt-24 py-24 flex items-center justify-between">
+    <div>
+        <h1 class="capitalize text-6xl font-bold">Pulau Dewata-Bali</h1>
+        <p class="w-4/5 my-4 text-lg">Bali, sering disebut sebagai "Pulau Dewata," Bali adalah sebuah pulau yang terletak di Indonesia, tepatnya di antara pulau Jawa dan Lombok.<br> <br>Budaya Bali adalah perpaduan yang kaya antara tradisi, seni, agama, dan adat yang berkembang di pulau Bali.Budaya ini memberikan warna tersendiri dalam kehidupan masyarakatnya. </p>
+    </div>
+    <div class="w-3/5">
+        <img src="img/bali1.jpg" alt="gambar hero section" class="w-full h-auto  object-cover">
+    </div>
+</div>
+    
+
+<div class="max-w-6xl mx-auto bg-white p-10 rounded-lg shadow-lg">
+    <div class="flex items-center mb-4">
+        <img src="img/balisejarah.jpeg" alt="bali" class="w-64 h-64 mr-4 object-cover rounded-full">
+        <div class="w-full md:w-2/3 pl-8"> 
+            <h1 class="capitalize text-3xl md:text-5xl font-bold my-2">
+                <span class="text-black-300">Sejarah</span>
+                <span class="text-red-500">Bali</span>
+            </h1><br>
+            <p class="w-4/4 my-4 text-gray-700">
+                Sejarah Bali dimulai sejak zaman prasejarah dengan bukti-bukti peradaban manusia purba yang hidup dengan berburu dan meramu. Pada abad ke-1 hingga ke-4 Masehi, Bali mulai menerima pengaruh Hindu dari India, yang berkembang menjadi agama dominan. Pada abad ke-10, Bali menjadi bagian dari Kerajaan Majapahit di Jawa, yang membawa pengaruh besar dalam seni dan budaya. Setelah jatuhnya Majapahit, Bali menjadi kerajaan-kerajaan lokal yang bertahan hingga abad ke-19, ketika Belanda menguasai pulau ini setelah serangkaian peperangan.<br><br>
+
+                Setelah Indonesia merdeka pada 1945, Bali menjadi bagian dari negara kesatuan Republik Indonesia dan berkembang pesat dengan sektor pariwisata yang mendunia. Meskipun menghadapi tantangan lingkungan dan sosial, Bali tetap mempertahankan budaya dan tradisinya yang kaya, menjadikannya salah satu destinasi wisata terpopuler di dunia
+            </p>
+        </div>
+    </div>
+</div>
+
+    
+    <div class="max-w-6xl mx-auto bg-white p-10 rounded-lg shadow-lg">
+            <div>
+                <h2 class="text-4xl font-bold flex items-center justify-center mb-4">Budaya Bali</h2>
+                            <div>
+                                <h2 class="text-lg font-semibold">Pakaian Adat Pengantin:</h2>
+                            </div>
+                            <div class="w-4/5 my-4 text-gray-700 ml-4">
+                                <ul class="list-disc pl-4">
+                                    Bali memiliki pakaian adat yang khas dengan tiga tingkatan untuk pengantin. Payas nista adalah pakaian adat Bali yang paling sederhana dan biasanya dipakai oleh kasta terendah, seperti sudra atau jaba. Sedangkan payas madya lebih mewah dibandingkan Payas Nista dan digunakan oleh tingkatan menengah, modelnya lebih rumit dan elegan. Payas Agung umumnya digunakan oleh golongan Triwangsa, yaitu Brahmana, Ksatrya, dan Wesia.
+
+                                    <div class="container mx-auto">
+                                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                                            <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
+                                                <img src="Bali/pengantin.jpg" alt="client" class="rounded-lg w-full h-full object-cover transform hover:scale-105 transition-all duration-300">
+                                            </div>
+                                            
+                                            <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
+                                                <img src="Bali/pengantin3.jpg" alt="client" class="rounded-lg w-full h-full object-cover transform hover:scale-105 transition-all duration-300">
+                                            </div>
+                                            
+                                            <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
+                                                <img src="Bali/pengantin4.jpeg" alt="client" class="rounded-lg w-full h-full object-cover transform hover:scale-105 transition-all duration-300">
+                                            </div>
+                                        </div>
+                                    </div>
+                               
+                                </ul>
+                            </div><br>
+                            
+                                        <div>
+                                                <h2 class="text-lg font-semibold">Rumah Adat : </h2>
+                                            </div>
+                                            <div class="w-4/5 my-4 text-gray-700 ml-4">
+                                                <ul class="list-disc pl-4">
+                                                    Rumah adat Bali menggunakan filosofi Tri Hita Karana, yang berarti harmoni antara manusia dengan manusia, harmoni dengan alam, dan harmoni dengan Tuhan. Orang Bali sangat memperhatikan setiap bagian rumah, mulai dari atap yang biasanya berbentuk limasan atau segitiga, bahan baku, struktur, hingga ornamen-ornamen khas Bali.
+                                                    Orang Bali sangat memperhatikan setiap bagian rumah, mulai dari atap yang biasanya berbentuk limasan atau segitiga, bahan baku, struktur, hingga ornamen-ornamen khas Bali.</li>
+
+                                                    <div class="container mx-auto">
+                                                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                                                            
+                                                            
+                                                            <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
+                                                                <img src="Bali/rumah.jpg" alt="client" class="rounded-lg w-full h-64 object-cover transform hover:scale-105 transition-all duration-300">
+                                                            </div>
+                                                            
+                                                            
+                                                            <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
+                                                                <img src="Bali/rumah1.jpg" alt="client" class="rounded-lg w-full h-64 object-cover transform hover:scale-105 transition-all duration-300">
+                                                            </div>
+                                                            
+                                                           
+                                                            <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
+                                                                <img src="Bali/rumah.jpg" alt="client" class="rounded-lg w-full h-64 object-cover transform hover:scale-105 transition-all duration-300">
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    
+                                               
+                                                  
+                                                </ul>
+                                            </div><br>
+
+                                            <div>
+                                                <h2 class="text-lg font-semibold">Alat Musik Tradisional :  </h2>
+                                            </div>
+                                            <div class="w-4/5 my-4 text-gray-700 ml-4">
+                                                
+                                                <p class="w-4/5 my-4 text-gray-700">
+                                                    Bali juga memiliki beragam alat musik, terutama dalam bentuk seperangkat gamelan yang terdiri dari berbagai instrumen. Jenis gamelan di Bali cukup bervariasi.
+                                                   
+                                                    <div class="container mx-auto">
+                                                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                                                            
+                                                            <!-- First Image -->
+                                                            <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
+                                                                <img src="Bali/gamelan.jpg" alt="client" class="rounded-lg w-full h-64 object-cover transform hover:scale-105 transition-all duration-300">
+                                                            </div>
+                                                            
+                                                            <!-- Second Image -->
+                                                            <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
+                                                                <img src="Bali/gamelan1.jpg" alt="client" class="rounded-lg w-full h-64 object-cover transform hover:scale-105 transition-all duration-300">
+                                                            </div>
+                                                            
+                                                            <!-- Third Image -->
+                                                            <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
+                                                                <img src="Bali/gambelan3.jpeg" alt="client" class="rounded-lg w-full h-64 object-cover transform hover:scale-105 transition-all duration-300">
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    
+                                                   
+                                                    
+                                                  
+                                                 </p>
+                                            </div><br>
+
+                                            <div>
+                                                <h2 class="text-lg font-semibold">Tradisi/ Upacara Adat : </h2>
+                                            </div>
+                                            <div class="w-4/5 my-4 text-gray-700 ml-4">
+                                                <ul class="list-disc pl-4">
+                                                    Salah satu upacara yang paling terkenal adalah upacara Ngaben, yaitu upacara pembakaran jenazah. Selain itu, ada upacara Melasti yang merupakan ritual penyucian diri dengan mendatangi sumber air, biasanya dilakukan sebelum hari raya Nyepi.
+                                                    
+                                                    
+                                                    <div class="container mx-auto">
+                                                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                                                            <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
+                                                                <img src="Bali/ngaben.jpg" alt="client" class="rounded-lg w-full h-full object-cover transform hover:scale-105 transition-all duration-300">
+                                                            </div>
+                                                            
+                                                            <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
+                                                                <img src="Bali/ngaben1.jpg" alt="client" class="rounded-lg w-full h-full object-cover transform hover:scale-105 transition-all duration-300">
+                                                            </div>
+                                                            
+                                                            <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
+                                                                <img src="Bali/ngaben2.webp" alt="client" class="rounded-lg w-full h-full object-cover transform hover:scale-105 transition-all duration-300">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </ul>
+                                            </div><br>
+                            
+                            <div>
+                                <h2 class="text-lg font-semibold">Kesenian Tari:</h2>
+                            </div>
+                            <div class="w-4/5 my-4 text-gray-700 ml-4">
+                                <ul class="list-disc pl-4">
+                                    Salah satu tarian khas Bali yang terkenal adalah Tari Kecak. Tari Kecak merupakan tarian yang sering dipentaskan oleh sekelompok penari pria dengan latar belakang vokal yang menggabungkan suara "cak" yang terus menerus. Tari Kecak biasanya mengisahkan cerita epik seperti Ramayana.
+                                    
+                                    
+                                    <div class="container mx-auto">
+                                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                                            <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
+                                                <img src="Bali/kecak.jpeg" alt="client" class="rounded-lg w-full h-full object-cover transform hover:scale-105 transition-all duration-300">
+                                            </div>
+                                            
+                                            <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
+                                                <img src="Bali/kecak1.webp" alt="client" class="rounded-lg w-full h-full object-cover transform hover:scale-105 transition-all duration-300">
+                                            </div>
+                                            
+                                            <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
+                                                <img src="Bali/kecak.jpeg" alt="client" class="rounded-lg w-full h-full object-cover transform hover:scale-105 transition-all duration-300">
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div><br>
+                            
+                            
+                        </div>
+                        <a href="galeri.html#bali">
+                            <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300">
+                                Lihat Galeri Bali 
+                            </button>
+                        </a>
+                    </div>
+                <br>
+                        </div>
+                    </div>
+
+                    <div class="px-6 py-5 md:px-28 md:py-10 flex flex-col items-center justify-center my-10">
+                         <!-- Konten Teks (optional) -->
+                         <div class="w-full text-center mt-6">
+                            <h1 class="text-3xl font-bold text-gray-900">Budaya dan Tradisi Bali</h1>
+                        </div><br><br>
+                        <!-- Embed YouTube Video -->
+                        <div class="w-full md:w-3/4">
+                            <iframe width="100%" height="500" src="https://www.youtube.com/embed/I0yMwO8RbHg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    
+                       
+                    </div>
+                    
+
+            
+
+                    <section class="client bg-gray-100 py-16">
+                        <div class="container mx-auto">
+                            <h2 class="text-3xl font-semibold text-center mb-8">Apa Yang Orang Katakan?</h2>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <div class="bg-white rounded-lg shadow-lg p-6">
+                                    <img src="img/cewek1.jpeg" alt="client" class="rounded-full w-20 h-20 mx-auto mb-4">
+                                    <p class="text-gray-700 text-center">
+                                        Bali merupakan tempat di mana tradisi dan budaya tetap dipertahankan dengan sangat baik. Masyarakat Bali tetap menjaga adat istiadat mereka meskipun pulau ini menjadi tujuan wisata internasional. Hal ini memberikan kesan bahwa Bali adalah tempat di mana budaya hidup dan berkembang dalam keseharian.
+                                    </p>
+                                </div>
+                    
+                                <div class="bg-white rounded-lg shadow-lg p-6">
+                                    <img src="img/cewek2.jpeg" alt="client" class="rounded-full w-20 h-20 mx-auto mb-4">
+                                    <p class="text-gray-700 text-center">
+                                        Saya merasakan betapa kuatnya spiritualitas di Bali, dengan setiap upacara dan ritual yang penuh makna.Keindahan budaya Bali bukan hanya terletak pada upacara atau seni, tetapi juga dalam keramahan masyarakatnya. Pengunjung sering merasakan sambutan hangat dan penuh kasih dari penduduk lokal.
+                                    </p>
+                                </div>
+                    
+                                <div class="bg-white rounded-lg shadow-lg p-6">
+                                    <img src="img/cewek3.jpeg" alt="client" class="rounded-full w-20 h-20 mx-auto mb-4">
+                                    <p class="text-gray-700 text-center">
+                                        Setelah mengunjungi Bali, saya merasakan kedalaman spiritual yang luar biasa. Pulau ini mengajarkan saya tentang pentingnya menjaga keseimbangan dalam hidup, antara tubuh, pikiran, dan jiwa. Di Bali, saya tidak hanya menikmati keindahan alam yang menakjubkan, tetapi juga merasakan kedamaian dalam setiap ritual yang dilakukan. 
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+    <!-- footer -->
+    <footer class="footer bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="footer_col">
+                    <div class="flex items-center">
+                        <img src="img/nusantaralogo.png" alt="Logo" class="w-14 mr-2">
+                        <h3 class="text-4xl font-semibold">Hari Nusantara</h3>
+                    </div>
+                    <p class="mt-4 leading-7">
+                        Nusantara hadir untuk merayakan keindahan budaya dan kekayaan samudera Indonesia. Melalui cerita, gambar, dan eksplorasi, kami ingin meningkatkan kesadaran serta apresiasi terhadap warisan nusantara yang memukau. Bersama, mari lestarikan keindahan negeri kita.
+                    </p>
+                    <p class="mt-4 leading-7">
+                        <em>Dibuat dengan ❤️ oleh Tim Nusantara.</em>
+                    </p>
+                </div>            
+                <div class="footer_col ml-10">
+                    <h4 class="text-2xl font-semibold">Kegiatan Hari Nusantara di Media Sosial</h4>
+                    <div class="flex items-center mt-2">
+                        <a href="https://www.instagram.com/p/DCqdi07zZFA/?utm_source=ig_web_copy_link" target="_blank" class="flex items-center">
+                            <p class="text-gray-500 hover:text-white hover:underline">Bazaar UMK di Kabupaten Berau - Instagram</p>
+                        </a>
+                    </div>
+                    
+                    <div class="flex items-center mt-2">
+                        <a href="https://www.instagram.com/p/DDinF7PBrdZ/?utm_source=ig_web_copy_link" target="_blank" class="flex items-center">
+                            <p class="text-gray-500 hover:text-white hover:underline">Upacara dan Pameran UMKM di Aceh - Instagram</p>
+                        </a>
+                    </div>
+                    
+                    <div class="flex items-center mt-2">
+                        <a href="https://vt.tiktok.com/ZS6RXkAWe/" target="_blank" class="flex items-center">
+                            <p class="text-gray-500 hover:text-white hover:underline">Peringatan Hari Nusantara di Kepulauan Tidore - Tiktok</p>
+                        </a>
+                    </div>
+    
+                    <div class="flex items-center mt-2">
+                        <a href="https://vt.tiktok.com/ZS6R4L3oF/" target="_blank" class="flex items-center">
+                            <p class="text-gray-500 hover:text-white hover:underline">Bakti Sosial Makan Gratis di Papua - Tiktok</p>
+                        </a>
+                    </div>
+    
+                    <div class="flex items-center mt-2">
+                        <a href="https://www.facebook.com/reel/2570197236513918?mibextid=rS40aB7S9Ucbxw6v" target="_blank" class="flex items-center">
+                            <p class="text-gray-500 hover:text-white hover:underline">Hari Nusantara di Kabupaten Bulungan - Youtube</p>
+                        </a>
+                    </div>
+    
+                    <div class="flex items-center mt-2">
+                        <a href="https://www.facebook.com/reel/596052582840320?mibextid=rS40aB7S9Ucbxw6v" target="_blank" class="flex items-center">
+                            <p class="text-gray-500 hover:text-white hover:underline">Upacara Peringatan di Yogyakarta - Facebook</p>
+                        </a>
+                    </div>
+                    
+                </div>
+                
+                <div class="footer_col">
+                    <h4 class="text-2xl font-semibold">Situs Kebudayaan Indonesia</h4>
+                    
+                    <div class="flex items-center mt-2">
+                        <a href="https://indonesiakaya.com/" target="_blank" class="flex items-center">
+                            <p class="text-gray-500 hover:text-white hover:underline">Situs Kebudayaan Indonesia</p>
+                        </a>
+                    </div>
+                    
+                    <div class="flex items-center mt-2">
+                        <a href="https://budaya-indonesia.org/" target="_blank" class="flex items-center">
+                            <p class="text-gray-500 hover:text-white hover:underline">Budaya Indonesia</p>
+                        </a>
+                    </div>
+                    
+                    <div class="flex items-center mt-2">
+                        <a href="https://budaya-data.kemdikbud.go.id/" target="_blank" class="flex items-center">
+                            <p class="text-gray-500 hover:text-white hover:underline">Budaya Kita</p>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-600 pt-8 text-center">
+                Copyright © 2024 Nusantara. Semua hak dilindungi undang-undang
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+            </div>
+        </div>
+    </div>
+
+    
+    
+    
+</body>
+</html>

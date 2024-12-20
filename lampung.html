@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- logo tab -->
+  <link rel="icon" href="img/nusantaralogo.png" type="image/x-icon">
+
+  <!-- Favicon tambahan untuk resolusi tinggi -->
+  <link rel="apple-touch-icon" href="img/nusantaralogo.png">
+  <link rel="icon" href="img/nusantaralogo.png" type="image/png" sizes="50">
+  <link rel="icon" href="img/nusantaralogo.png" type="image/png" sizes="20">
+    
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <title>Budaya Nusantara - Lampung</title>
+    <style>
+        .bg-changing {
+            background-size: cover;
+            background-position: center;
+            transition: background-image 0.5s ease-out;
+        }
+        .crop {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+        .crop img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+        }
+        .custom-font {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 800;
+            letter-spacing: 0.8px;
+        }
+        .text-shadow {
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), /* Bayangan utama */
+                     -2px -2px 5px rgba(0, 0, 0, 0.2), /* Bayangan tambahan */
+                     3px 3px 5px rgba(0, 0, 0, 0.2);  /* Bayangan tambahan */
+        }
+ 
+    </style>
+</head>
+<body>
+
+    <!--nav start-->
+    <nav class="fixed w-full shadow p-4 px-28 bg-black bg-opacity-20 z-50">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center w-80">
+            <!-- Container text dan logo -->
+            <div class="text-xl font-bold flex items-center space-x-2">
+                <img src="img/nusantaralogo.png" alt="Logo" class="w-12">
+                <span class="text-white text-shadow" style="font-size: 25px;">Hari Nusantara</span>
+                
+            </div>
+        </div>
+        <div class="flex w-70 justify-start font-bold space-x-6 ml-4 custom-font">
+            <a href="index.html" class="text-white-500 hover:text-blue-500 transition duration-200 text-shadow" style="color: white;">Beranda</a>
+            <a href="index.html#kegiatan" class="text-gray-500 hover:text-blue-500 transition duration-200 text-shadow" style="color: white">Kegiatan</a>
+            <div class="relative">
+                <button class="text-gray-500 hover:text-blue-500 transition duration-200 focus:outline-none text-shadow" style="color: white;">
+                    Jelajahi
+                </button>
+                <div class="absolute hidden mt-2 w-48 bg-white shadow-lg rounded-lg ring-1 ring-black ring-opacity-5 group-hover:block">
+                    <a href="index.html#samudera" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Kekayaan Samudera</a>
+                    <a href="index.html#budaya" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Budaya Nusantara</a>
+                </div>
+            </div>
+            <a href="galeri.html" class="text-gray-500 hover:text-blue-500 transition duration-200 text-shadow" style="color: white">Galeri</a>
+            <a href="index.html#tentang" class="text-gray-500 hover:text-blue-500 transition duration-200 text-shadow" style="color: white;">Tentang</a>
+        </div>
+    </div>
+</nav>
+<script>
+    // Script untuk menampilkan dropdown menu saat klik pada tombol
+    document.querySelector('button').addEventListener('click', function() {
+        const dropdownContent = this.nextElementSibling;
+        dropdownContent.classList.toggle('hidden');
+    });
+</script>
+<!-- End Navbar -->
+
+<!-- index.html Section -->
+<div id="index.htmlSection" class="w-full h-screen bg-no-repeat bg-center bg-cover bg-fixed bg-scroll bg-changing" style="background-image: url('img/lampung5.jpeg');">
+    <div class="flex items-center justify-center min-h-screen px-28 py-24">
+        <div class="text-center">
+            <h1 class="text-7xl font-bold text-white text-shadow" style="font-size: 50px;">LAMPUNG</h1>
+            <h3 class="capitalize font-bold w-full mx-auto my-4 text-white whitespace-nowrap text-shadow" style="font-size: 25px;">keberagaman budaya dan masyarakatnya</h3>
+        </div>
+    </div>
+</div>
+<!-- End index.html Section -->
+
+<div class="px-28 p-5 pt-24 py-24 flex items-center justify-between">
+    <div>
+        <h1 class="capitalize text-6xl font-bold">Lampung</h1>
+        <p class="my-4 text-base md:text-lg md:w-4/5">Lampung adalah sebuah provinsi yang terletak di ujung paling selatan Pulau Sumatra, Indonesia. Provinsi ini berbatasan langsung dengan Selat Sunda, yang memisahkan Pulau Sumatra dan Pulau Jawa. <br> <br>Budaya Lampung merupakan perpaduan antara tradisi, seni, dan kehidupan masyarakat yang berkembang di provinsi Lampung, yang terletak di bagian selatan Pulau Sumatra.</p>
+
+    </div>
+    <div class="w-4/5">
+        <img src="img/logolampung1.jpeg" alt="gambar hero section" class="w-full h-auto  object-cover">
+    </div>
+</div>
+
+<div class="max-w-6xl mx-auto bg-white p-10 rounded-lg shadow-lg">
+    <div class="flex items-center mb-4">
+        <img src="img/sejarahlampung.jpeg" alt="bali" class="w-64 h-64 mr-4 object-cover rounded-full">
+        <div class="w-full md:w-2/3 pl-8"> <!-- Menambahkan padding kiri (pl-6) agar teks lebih jauh dari gambar -->
+            <h1 class="capitalize text-3xl md:text-5xl font-bold my-2">
+                <span class="text-black-300">Sejarah</span>
+                <span class="text-red-500">Lampung</span>
+            </h1><br>
+            <p class="text-base md:text-l">Lampung adalah salah satu provinsi di Indonesia yang terletak di bagian selatan Pulau Sumatra. Sejarah Lampung sangat kaya dan dipengaruhi oleh berbagai kebudayaan dan peristiwa besar sepanjang zaman. Lampung memiliki sejarah yang panjang yang dimulai sejak zaman prasejarah. Bukti-bukti arkeologis menunjukkan bahwa daerah ini sudah dihuni oleh manusia sejak ribuan tahun yang lalu. Beberapa penemuan di situs seperti Gua Batin, Gua Tujuh, dan Gua Batu Putih di Lampung menunjukkan adanya kehidupan manusia purba, termasuk alat-alat batu yang digunakan oleh manusia zaman dahulu.<br> <br>sejarah Lampung mencerminkan perpaduan antara pengaruh budaya lokal, kerajaan-kerajaan besar, penjajahan kolonial, dan perkembangan ekonomi modern. Lampung terus berkembang sebagai salah satu provinsi penting di Indonesia, dengan warisan budaya yang kaya dan peranannya dalam perekonomian nasional.</p>
+        </div>
+    </div>
+</div>
+    <div class="max-w-6xl mx-auto bg-white p-10 rounded-lg shadow-lg">
+            <div>
+                <h2 class="text-4xl font-bold flex items-center justify-center mb-4">Budaya Lampung </h2>
+                            <div>
+                                <h2 class="text-lg font-semibold">Pakaian Adat Pengantin:</h2>
+                            </div>
+                            <div class="w-4/5 my-4 text-gray-700 ml-4">
+                                <ul class="list-disc pl-4">
+                                    Pakaian ini biasanya digunakan oleh masyarakat adat Saibatin. Ciri khasnya adalah pengantin wanita mengenakan Siger, sebuah mahkota besar berbentuk tanduk emas atau kuningan yang melambangkan kebesaran dan kehormatan. Pakaian terbuat dari kain beludru dihiasi sulaman emas, dipadukan dengan kain Tapis, yaitu kain tenun tradisional khas Lampung.
+                                    <div class="container mx-auto">
+                                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                                            <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
+                                                <img src="Lampung/pakaian.jpg" alt="client" class="rounded-lg w-full h-64 object-cover transform hover:scale-105 transition-all duration-300">
+                                            </div>
+                                            
+                                            <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
+                                                <img src="Lampung/pakaian1.jpg" alt="client" class="rounded-lg w-full h-64 object-cover transform hover:scale-105 transition-all duration-300">
+                                            </div>
+                                            
+                                            <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
+                                                <img src="Lampung/pakaian2.webp" alt="client" class="rounded-lg w-full h-64 object-cover transform hover:scale-105 transition-all duration-300">
+                                            </div>
+                                        </div>
+                                    </div>
+                               
+                                </ul>
+                            </div><br>
+                            
+                                        <div>
+                                                <h2 class="text-lg font-semibold">Rumah Adat : </h2>
+                                            </div>
+                                            <div class="w-4/5 my-4 text-gray-700 ml-4">
+                                                <ul class="list-disc pl-4">
+                                                    amban Pesagi merupakan rumah tradisional masyarakat Lampung yang masih tersisa dan menjadi aset warisan budaya yang harus terus dijaga keberadaannya.</li>
+
+                                                    <div class="container mx-auto">
+                                                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                                                            
+                                                            
+                                                            <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
+                                                                <img src="Lampung/rumah.jpg" alt="client" class="rounded-lg w-full h-64 object-cover transform hover:scale-105 transition-all duration-300">
+                                                            </div>
+                                                            
+                                                            
+                                                            <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
+                                                                <img src="Lampung/rumah1.jpg" alt="client" class="rounded-lg w-full h-64 object-cover transform hover:scale-105 transition-all duration-300">
+                                                            </div>
+                                                            
+                                                           
+                                                            <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
+                                                                <img src="Lampung/rumah2.jpg" alt="client" class="rounded-lg w-full h-64 object-cover transform hover:scale-105 transition-all duration-300">
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    
+                                               
+                                                  
+                                                </ul>
+                                            </div><br>
+
+                                            <div>
+                                                <h2 class="text-lg font-semibold">Alat Musik Tradisional :  </h2>
+                                            </div>
+                                            <div class="w-4/5 my-4 text-gray-700 ml-4">
+                                                
+                                                <p class="w-4/5 my-4 text-gray-700">
+                                                    Gambus Lampung merupakan alat musik tradisional yang menggabungkan unsur-unsur musik Arab dengan nuansa lokal. Gambus hampir mirip dengan gitar, namun ia memiliki ciri khas resonator bundar yang terbuat dari kulit binatang atau kayu.
+                                                   
+                                                    <div class="container mx-auto">
+                                                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                                                            
+                                                            <!-- First Image -->
+                                                            <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
+                                                                <img src="Lampung/musik.jpeg" alt="client" class="rounded-lg w-full h-64 object-cover transform hover:scale-105 transition-all duration-300">
+                                                            </div>
+                                                            
+                                                            <!-- Second Image -->
+                                                            <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
+                                                                <img src="Lampung/musik1.jpg" alt="client" class="rounded-lg w-full h-64 object-cover transform hover:scale-105 transition-all duration-300">
+                                                            </div>
+                                                            
+                                                            <!-- Third Image -->
+                                                            <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
+                                                                <img src="Lampung/musik2.jpg" alt="client" class="rounded-lg w-full h-64 object-cover transform hover:scale-105 transition-all duration-300">
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    
+                                                   
+                                                    
+                                                  
+                                                 </p>
+                                            </div><br>
+
+                                            <div>
+                                                <h2 class="text-lg font-semibold">Tradisi/ Upacara Adat : </h2>
+                                            </div>
+                                            <div class="w-4/5 my-4 text-gray-700 ml-4">
+                                                <ul class="list-disc pl-4">
+                                                   
+                                                    Upacara Gawi adalah ritual rasa syukur atas kejadian seperti kelahiran anak atau pernikahan. Upacara ini biasanya dilakukan selama 10 hari dan diikuti dengan persembahan seperti sapi, kerbau, telur, atau amplop berisi uang. 
+                                                    <div class="container mx-auto">
+                                                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                                                            <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
+                                                                <img src="Lampung/upacara1.jpg" alt="client" class="rounded-lg w-full h-64 object-cover transform hover:scale-105 transition-all duration-300">
+                                                            </div>
+                                                            
+                                                            <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
+                                                                <img src="Lampung/upacara2.JPG" alt="client" class="rounded-lg w-full h-64 object-cover transform hover:scale-105 transition-all duration-300">
+                                                            </div>
+                                                            
+                                                            <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
+                                                                <img src="Lampung/upacara3.jpg" alt="client" class="rounded-lg w-full h-64 object-cover transform hover:scale-105 transition-all duration-300">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </ul>
+                                            </div><br>
+                            
+                            <div>
+                                <h2 class="text-lg font-semibold">Kesenian Tari:</h2>
+                            </div>
+                            <div class="w-4/5 my-4 text-gray-700 ml-4">
+                                <ul class="list-disc pl-4">
+                                    Tari Bedana adalah tarian adat Lampung yang ditarikan secara berpasangan oleh penari putra dan putri. Tarian ini berasal dari masyarakat Lampung Saibatin yang sebagian besar tinggal di pesisir. 
+                                    
+                                    <div class="container mx-auto">
+                                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                                            <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
+                                                <img src="Lampung/tari.jpg" alt="client" class="rounded-lg w-full h-64 object-cover transform hover:scale-105 transition-all duration-300">
+                                            </div>
+                                            
+                                            <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
+                                                <img src="Lampung/tari4.jpg" alt="client" class="rounded-lg w-full h-64 object-cover transform hover:scale-105 transition-all duration-300">
+                                            </div>
+                                            
+                                            <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
+                                                <img src="Lampung/tari2.jpg" alt="client" class="rounded-lg w-full h-64 object-cover transform hover:scale-105 transition-all duration-300">
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div><br>
+                            
+                            
+                        </div>
+                        <a href="galeri.html#lampung">
+                            <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300">
+                                Lihat Galeri Lampung
+                            </button>
+                        </a>
+                    </div>
+    <br>
+                        </div>
+                    </div>
+
+                    <div class="px-6 py-5 md:px-28 md:py-10 flex flex-col items-center justify-center my-10">
+                        <!-- Konten Teks (optional) -->
+                        <div class="w-full text-center mt-6">
+                           <h1 class="text-3xl font-bold text-gray-900">Budaya dan Tradisi Lampung</h1>
+                       </div><br><br>
+                       <!-- Embed YouTube Video -->
+                       <div class="w-full md:w-3/4">
+                           <iframe width="100%" height="500" src="https://www.youtube.com/embed/GaqJF8d7uFo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                       </div>
+                    </div>
+                    
+
+                    <section class="client bg-gray-100 py-16">
+                        <div class="container mx-auto">
+                            <h2 class="text-3xl font-semibold text-center mb-8">Apa Yang Orang Katakan?</h2>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <div class="bg-white rounded-lg shadow-lg p-6">
+                                    <img src="img/cewek1.jpeg" alt="client" class="rounded-full w-20 h-20 mx-auto mb-4">
+                                    <p class="text-gray-700 text-center">
+                                        Saya merasakan takjub dengan keanekaragaman seni dan budaya yang ada di Lampung, terutama dalam hal tari tradisional, musik, dan kerajinan tangan.
+                                    </p>
+                                </div>
+                    
+                                <div class="bg-white rounded-lg shadow-lg p-6">
+                                    <img src="img/cewek2.jpeg" alt="client" class="rounded-full w-20 h-20 mx-auto mb-4">
+                                    <p class="text-gray-700 text-center">
+                                            Banyak pengunjung yang merasakan keterhubungan emosional dengan sejarah dan legenda yang ada di Lampung, seperti cerita tentang Keris Lampung atau legenda Krakatau. 
+                                    </p>
+                                </div>
+                    
+                                <div class="bg-white rounded-lg shadow-lg p-6">
+                                    <img src="img/cewek3.jpeg" alt="client" class="rounded-full w-20 h-20 mx-auto mb-4">
+                                    <p class="text-gray-700 text-center">
+                                        Pengunjung sering merasa bahwa Lampung memiliki kekayaan budaya yang sangat bernilai, dan mereka merasa bahagia dan puas bisa mengalaminya secara langsung. 
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+   <!-- footer -->
+   <footer class="footer bg-gray-800 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="footer_col">
+                <div class="flex items-center">
+                    <img src="img/nusantaralogo.png" alt="Logo" class="w-14 mr-2">
+                    <h3 class="text-4xl font-semibold">Hari Nusantara</h3>
+                </div>
+                <p class="mt-4 leading-7">
+                    Nusantara hadir untuk merayakan keindahan budaya dan kekayaan samudera Indonesia. Melalui cerita, gambar, dan eksplorasi, kami ingin meningkatkan kesadaran serta apresiasi terhadap warisan nusantara yang memukau. Bersama, mari lestarikan keindahan negeri kita.
+                </p>
+                <p class="mt-4 leading-7">
+                    <em>Dibuat dengan ❤️ oleh Tim Nusantara.</em>
+                </p>
+            </div>            
+            <div class="footer_col ml-10">
+                <h4 class="text-2xl font-semibold">Kegiatan Hari Nusantara di Media Sosial</h4>
+                <div class="flex items-center mt-2">
+                    <a href="https://www.instagram.com/p/DCqdi07zZFA/?utm_source=ig_web_copy_link" target="_blank" class="flex items-center">
+                        <p class="text-gray-500 hover:text-white hover:underline">Bazaar UMK di Kabupaten Berau - Instagram</p>
+                    </a>
+                </div>
+                
+                <div class="flex items-center mt-2">
+                    <a href="https://www.instagram.com/p/DDinF7PBrdZ/?utm_source=ig_web_copy_link" target="_blank" class="flex items-center">
+                        <p class="text-gray-500 hover:text-white hover:underline">Upacara dan Pameran UMKM di Aceh - Instagram</p>
+                    </a>
+                </div>
+                
+                <div class="flex items-center mt-2">
+                    <a href="https://vt.tiktok.com/ZS6RXkAWe/" target="_blank" class="flex items-center">
+                        <p class="text-gray-500 hover:text-white hover:underline">Peringatan Hari Nusantara di Kepulauan Tidore - Tiktok</p>
+                    </a>
+                </div>
+
+                <div class="flex items-center mt-2">
+                    <a href="https://vt.tiktok.com/ZS6R4L3oF/" target="_blank" class="flex items-center">
+                        <p class="text-gray-500 hover:text-white hover:underline">Bakti Sosial Makan Gratis di Papua - Tiktok</p>
+                    </a>
+                </div>
+
+                <div class="flex items-center mt-2">
+                    <a href="https://www.facebook.com/reel/2570197236513918?mibextid=rS40aB7S9Ucbxw6v" target="_blank" class="flex items-center">
+                        <p class="text-gray-500 hover:text-white hover:underline">Hari Nusantara di Kabupaten Bulungan - Youtube</p>
+                    </a>
+                </div>
+
+                <div class="flex items-center mt-2">
+                    <a href="https://www.facebook.com/reel/596052582840320?mibextid=rS40aB7S9Ucbxw6v" target="_blank" class="flex items-center">
+                        <p class="text-gray-500 hover:text-white hover:underline">Upacara Peringatan di Yogyakarta - Facebook</p>
+                    </a>
+                </div>
+                
+            </div>
+            
+            <div class="footer_col">
+                <h4 class="text-2xl font-semibold">Situs Kebudayaan Indonesia</h4>
+                
+                <div class="flex items-center mt-2">
+                    <a href="https://indonesiakaya.com/" target="_blank" class="flex items-center">
+                        <p class="text-gray-500 hover:text-white hover:underline">Situs Kebudayaan Indonesia</p>
+                    </a>
+                </div>
+                
+                <div class="flex items-center mt-2">
+                    <a href="https://budaya-indonesia.org/" target="_blank" class="flex items-center">
+                        <p class="text-gray-500 hover:text-white hover:underline">Budaya Indonesia</p>
+                    </a>
+                </div>
+                
+                <div class="flex items-center mt-2">
+                    <a href="https://budaya-data.kemdikbud.go.id/" target="_blank" class="flex items-center">
+                        <p class="text-gray-500 hover:text-white hover:underline">Budaya Kita</p>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        <div class="mt-8 border-t border-gray-600 pt-8 text-center">
+            Copyright © 2024 Nusantara. Semua hak dilindungi undang-undang
+        </div>
+    </div>
+</footer>
+<!-- end footer -->
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
